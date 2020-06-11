@@ -1,0 +1,31 @@
+{
+  "name": "spts",
+  "version": "0.2.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "node index.js",
+    "api-dev": "nodemon index.js",
+    "app": "cd app/ && npm run start",
+    "app-build": "cd app/ && npm run build",
+    "app-test": "cd app/ && npm run test",
+    "app-eject": "cd app/ && npm run eject",
+    "web-app": "concurrently \"npm run api\" \"npm run app-build\"",
+    "web-app-dev": "concurrently \"npm run api-dev\" \"npm run app\""
+  },
+  "author": "Aljaž Bogdan",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "js-sha512": "^0.8.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.0",
+    "readline-sync": "^1.4.10",
+    "striptags": "^3.1.1",
+    "trim": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
